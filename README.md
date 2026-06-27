@@ -14,7 +14,7 @@
 
 
 
-# OrphaFold: Deep Structural Search for Orphan Diseases
+# OrphaFold AI : Deep Structural Search for Orphan Diseases
 
 > [!NOTE]
 > OrphaFold-Ai is a **Research Prototype and Proof of Concept (PoC)**. It is intended for professional researchers and geneticists as a decision-support tool, not as a clinical system.
@@ -176,6 +176,46 @@ sequenceDiagram
 This project is optimized for deployment on **Google AI Studio**.
 
 ---
+# OrphaFold AI Project Details
+
+## Inspiration
+Today, over 300 million people live with a rare disease. Yet, **95% of these 7,000+ conditions have no approved treatment**. This crisis is largely driven by a chronic lack of funding, economic barriers, and fragmented knowledge trapped in data silos. We were inspired to bridge this gap by leveraging modern AI to democratize drug repurposing and provide actionable, structured insights for researchers and geneticists working tirelessly to find cures.
+
+## What it does
+OrphaFold AI is a research platform that accelerates discovery in orphan diseases by combining real-time API enrichment with advanced Multi-Agent orchestration. 
+When a researcher inputs a rare disease, the platform acts as a "Pre-Flight" layer to query multiple biological APIs. It then delegates specialized analysis to four intelligent agents:
+1. **Clinical Grounding Agent:** Establishes the clinical baseline (prevalence, inheritance).
+2. **Bio-Mechanism Agent:** Uncovers molecular pathophysiology and structural machinery.
+3. **Discovery Agent:** Connects the disease to active trials and clinical landscape.
+4. **Drug Repurposing Agent:** Proposes therapeutic candidates via 3D structural homology and binding pocket analysis.
+
+## How we built it
+The platform is powered by a robust stack:
+*   **Orchestration Engine:** We utilized **Gemini 1.5 Pro** to manage and orchestrate the complex interactions of our 4-agent system.
+*   **Frontend:** Built a responsive, interactive UI using **React** and **TypeScript** to render molecular structures and clinical data cards.
+*   **Data Integration:** Integrated a wide array of REST APIs including Orphanet, OMIM, UniProt, AlphaFold DB, PubMed, ClinicalTrials.gov, DrugBank, and ChEMBL.
+
+## Challenges we ran into
+*   **Data Silos & API Integration:** Normalizing data across so many different biological databases (from genetic data to protein structures) proved challenging.
+*   **Agent Orchestration:** Ensuring that the Gemini agents collaborated effectively without hallucinations, maintaining strict adherence to the biological context.
+*   **Structural Analysis in Real-Time:** Incorporating 3D binding pocket analysis and structural homology scoring in a way that feels fluid and responsive on the UI.
+
+## Accomplishments that we're proud of
+*   Successfully orchestrating a 4-agent AI pipeline that handles specialized biomedical reasoning flawlessly.
+*   Integrating real-time 3D protein visualization (via AlphaFold DB) directly into the decision-support dashboard.
+*   Creating a synthesis loop that automatically generates highly plausible drug repurposing hypotheses based on structural overlap, rather than just literature scraping.
+
+## What we learned
+*   We gained deep insights into the complexity of orphan diseases and the structural biology behind them.
+*   We learned advanced prompt engineering and agent delegation techniques to keep LLMs strictly grounded in external API data.
+*   We realized the immense potential for AI to break down barriers in neglected fields of medicine.
+
+## What's next for Orphafold AI
+*   **Direct Docking Simulations:** Integrating in-silico simulations directly within the agentic loop to transform our structural hypotheses into predictive, quantitative scores.
+*   **Agent Development Kit (ADK):** Transitioning to a more comprehensive orchestration and modularity framework.
+*   **Pilot Beta Tests:** Collaborating directly with geneticists and rare disease researchers to validate our platform's utility in real-world scenarios.
+*   **Scale Data Sources:** Expanding our data ingestion to include real-world evidence (RWE) and even more specialized genomic repositories.
+
 
 ## 🚀 Next Steps
 
